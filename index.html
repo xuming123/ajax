@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div id="ffffff"></div>
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type: 'GET', // 请求方式
+			url: 'json.js' ,
+		    dataType:'json',  
+		    success: function(json){
+
+					var htext = json.xuexi
+					console.log(htext.length)
+					var html = '';
+					for (var i = 0;i < htext.length; i++){
+						  	html +='<ul>';
+							html +='<li class="first">'+htext[i].title+'</li>';
+							html +='<li class="first">'+htext[i].content+'</li>';
+						  	html +='</ul>';
+					}
+
+					$("#ffffff").append(html)
+
+
+		    },
+		});
+	
+	})
+</script>
+</html>
