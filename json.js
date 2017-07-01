@@ -6,7 +6,7 @@
 	"xuexi" : [
 		{
 			"title":"标题12312312",
-			"content":"wo是内容",
+			"content":"wo是内容"
 		},
 		{
 			"title":"标题34343",
